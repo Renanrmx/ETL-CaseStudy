@@ -138,8 +138,7 @@ if __name__ == "__main__":
     base_fields = ["wind_speed", "power", "timestamp"]
     etl_operations = ["std", "min", "max", "mean"]
 
-    # input_date = parse_input_date()
-    input_date = "2024-11-09"
+    input_date = parse_input_date()
     df_source = get_data_from_source(input_date, fields=base_fields)
     df_set = transform_data(df_source, operations=etl_operations)
     set_data_to_target(df_set)
