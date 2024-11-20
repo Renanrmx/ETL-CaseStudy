@@ -26,7 +26,9 @@ python /Base/Schema/schema.py
 
 ```
 
-Pode gerar dados aleatórios para teste
+Pode gerar dados aleatórios para teste, este script gera em frequência de 1 minutal e num intervalo de 10 dias
+
+Obs: Está definido para gerar retroativamente a partir da data atual de execução
 ```
 python /Base/Schema/generate.py
 ```
