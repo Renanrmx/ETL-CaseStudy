@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 import sqlalchemy.orm
-from sqlalchemy import create_engine, Column, text, Integer, Numeric, DateTime
+from sqlalchemy import create_engine, Column, text, Integer, Numeric, TIMESTAMP
 
 
 dotenv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '.env')
@@ -21,7 +21,7 @@ class Data(Base):
     __tablename__ = 'data'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    timestamp = Column(DateTime, nullable=False)
+    timestamp = Column(TIMESTAMP, nullable=False)
     wind_speed = Column(Numeric, nullable=False)
     power = Column(Numeric, nullable=False)
     ambient_temperature = Column(Numeric, nullable=False)
